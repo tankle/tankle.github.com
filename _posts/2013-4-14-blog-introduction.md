@@ -27,11 +27,11 @@ blog是在pages的基础上搭建的，创建一个用户的页面很简单，�
 
 $ mkdir foo.github.com
 
-# 进入文件夹根目录
+\# 进入文件夹根目录
 
 $ cd foo.github.com
 
-# 初始化
+\# 初始化
 
 $ git init
 
@@ -39,27 +39,27 @@ $ touch README
 
 $ git add README
 
-# 在根目录下新建一个index.html页面，随便写点什么
+\# 在根目录下新建一个index.html页面，随便写点什么
 
-# 把index.html加入到仓库中
+\# 把index.html加入到仓库中
 
 $ git add .
 
-# 提交修改
+\# 提交修改
 
 $ git commit -m ‘first commit’
 
-# 添加github的分支
+\# 添加github的分支
 
 $ git remote add origin git@github.com:foo/foo.github.com.git
 
-# 提交到github分支
+\# 提交到github分支
 
 $ git push origin master
 
 过1分钟左右，浏览http://foo.github.com，就可以看到刚刚创建的index.html文件了。 除了创建用户页面，还可以针对每个项目单独创建项目的主页
 
-创建blog
+**创建blog**
 
 到这里其实已经可以写博客了，创建一个index.html页面，在里面列出写过的文章，点击标题进去后又是一个手动创建的html页。就是太麻烦了，一点都不酷。
 
@@ -91,19 +91,20 @@ other files/folders
 
 上面没有列出的文件/文件夹都会被jekyll放到_site文件夹下，如css/image/script等等。
 
-jekyll的安装
+j**ekyll的安装**
 
 参考博文pJekyll 非你莫属](http://chxt6896.github.io/blog/2011/11/30/blog-jekyll-install.html)
 
-绑定域名
+**绑定域名**
 
 很简单，新建一个CNAME文本文件，在里面输入域名，如”chxt6896.com”，然后在域名提供商里，指定该域名的CNAME为”chxt6896.github.com”，搞定
 
-添加评论功能
+**添加评论功能**
 
 参考博文Disqus 我的评论我做主
 
-参考文章
+**参考文章**
+阮一峰：http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html
 
 后记
 
