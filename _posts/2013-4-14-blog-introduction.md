@@ -1,9 +1,10 @@
 ﻿---
 layout: post
-category : blog�
-tagline: "blog����֪ʶ"
+category : blog安装
+tagline: "blog安装入门"
 tags : [intro, beginner, jekyll, github, tutorial]
 ---
+
 git
 
 git是一个分布式版本控制工具(DVCS)，不需要服务端软件支持(即使在地铁里也可以正常commit)，Linux内核开发用的版本控制工具就是它。 常用的SVN属于集中式版本控制工具(CVCS)，需要在服务端开启SVN服务，然后客户端checkout,commit,update。
