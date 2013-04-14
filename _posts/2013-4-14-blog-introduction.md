@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 category : blog安装
 tagline: "blog安装入门"
