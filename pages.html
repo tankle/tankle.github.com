@@ -1,0 +1,17 @@
+---
+layout: page
+title: Pages 
+header: Pages
+group: example-page
+---
+
+<h2>所有页面</h2>
+{% assign pages_list = site.pages %}
+{% include JB/pages_list %}
+
+<h2>默认group(example-page)中的页面</h2>
+{% assign pages_list = site.pages %}
+{% assign group = 'example-page' %}
+{% include JB/pages_list %}
+
+<br/>

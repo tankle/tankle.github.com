@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scaffolding · Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="twitter-bootstrap中文文档">
+    <meta name="author" content="mceiba">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">概述</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">基架</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">基本样式表</a>
+              </li>
+              <li class="">
+                <a href="./components.html">组件</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript插件</a>
+              </li>
+              <li class="">
+                <a href="./less.html">使用LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">自定义</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">实例</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+            <!-- Masthead
+      ================================================== -->
+      <header class="jumbotron subhead" id="overview">
+        <h1>基本构架</h1>
+        <p class="lead">Bootstrap基于响应式的12列布局，还包括了固定的和流动宽度的布局。</p>
+        <div class="subnav">
+          <ul class="nav nav-pills">
+            <li><a href="#global">全局样式</a></li>
+            <li><a href="#gridSystem">固定网格布局</a></li>
+            <li><a href="#fluidGridSystem">流动网格布局</a></li>
+            <li><a href="#gridCustomization">定制网格</a></li>
+            <li><a href="#layouts">布局设计</a></li>
+            <li><a href="#responsive">响应式设计</a></li>
+          </ul>
+        </div>
+      </header>
+
+
+<!-- Global Bootstrap settings
+================================================== -->
+<section id="global">
+  <div class="page-header">
+    <h1>全局样式 <small>预设样式，排版，链接</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>需要HTML5文档类型</h2>
+      <p>Bootstrap利用了HTML5元素和CSS性，需要HTML5文档类型。确保在你的页面开始包含了HTML5文档类型。</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h2>排版和链接</h2>
+      <p>在基建文件&lt;strong&gt;scaffolding.less&lt;/strong&gt;中，我们设置了基本的全局显示、排版和链接样式，特别的：</p>
+      <ul>
+        <li>移除body中的margin属性</li>
+        <li>在<code>body</code>上设置<code>background-color: white;</code></li>
+        <li>使用<code>@baseFontFamily</code>, <code>@baseFontSize</code>，和<code>@baseLineHeight</code>属性作为字体排版的基本样式</li>
+        <li>通过<code>@linkColor</code>设置全局的链接样式，只在<code>hover</code>上应用下划线</li>
+    </ul>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h2>通过Normalize框架重置样式</h2>
+      <p>在Bootstrap 2.0版本中，传统的CSS reset（为去除浏览器间的差异而自定义的CSS代码段）逐渐利用<a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>的元素，Normalize.css由<a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a>创建，是一个基于<a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>的项目。</p>
+      <p>新的重置（reset）任然可以在<strong>reset.less</strong>中找到，但是为了简洁和准确起见很多元素已经被删除。</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+
+<!-- Grid system
+================================================== -->
+<section id="gridSystem">
+  <div class="page-header">
+    <h1>固定网格布局 <small>响应式的12列网格</small></h1>
+  </div>
+
+  <div class="row show-grid">
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span8">8</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span6">6</div>
+    <div class="span6">6</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span12">12</div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <p>Bootstrap提供的默认网格布局是一个<strong>940px宽，12列</strong>的网格。</p>
+      <p>同时提供了4种响应式的变种来适应不同的种类的设备和屏幕分辨率，这包括：手机、平板、小型电脑以及大多数的宽屏幕电脑。</p>
+    </div><!-- /.span -->
+    <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span4">
+      <p>如图所示，两列就可以构成一个基本的布局，其中的每一个<code>span</code>都是我们之前定义的12个基本列之一。</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <br>
+
+  <h2>偏移列</h2>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span4 offset4">4 offset 4</div>
+  </div><!-- /row -->
+  <div class="row show-grid">
+    <div class="span3 offset3">3 offset 3</div>
+    <div class="span3 offset3">3 offset 3</div>
+  </div><!-- /row -->
+  <div class="row show-grid">
+    <div class="span8 offset4">8 offset 4</div>
+  </div><!-- /row -->
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span4 offset4"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  <br>
+
+  <h2>嵌套列</h2>
+  <div class="row">
+    <div class="span6">
+      <p>对于Bootstrap中静态（非流动式）的网格布局，嵌套是很容易实现的，仅仅需要增加一个新的<code>.row</code>，然后在已经存在的<code>.span*</code>列中加入新的<code>.span*</code>列。</p>
+      <h3>例如</h3>
+      <p>被嵌入的行所包含的列数加起来要等于外一层的列数。比如嵌入的两个<code>.span3</code>列必须放在一个<code>.span6</code>中。</p>
+      <div class="row show-grid">
+        <div class="span6">
+          Level 1 of column
+          <div class="row show-grid">
+            <div class="span3">
+              Level 2
+            </div>
+            <div class="span3">
+              Level 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.span -->
+    <div class="span6">
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span12"&gt;
+    Level 1 of column
+    &lt;div class="row"&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+<!-- Fluid grid system
+================================================== -->
+<section id="fluidGridSystem">
+  <div class="page-header">
+    <h1>流动网格布局 <small>响应式的，基于百分比的12列</small></h1>
+  </div>
+
+  <h2>流动列</h2>
+  <div class="row-fluid show-grid">
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span4">4</div>
+    <div class="span8">8</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span6">6</div>
+    <div class="span6">6</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span12">12</div>
+  </div>
+
+  <div class="row">
+    <div class="span4">
+      <h3>用百分比代替像素数</h3>
+      <p>流动网格布局系统使用百分比代替固定的像素数来表示列宽，它 和固定式的网格布局一样，也采用了响应式的设计，用来确保适应不同的屏幕分辨率和设备。</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>流动行</h3>
+      <p>要想让固定行流动起来，只需要简单的将<code>.row</code>改为<code>.row-fluid</code>。列保持不变，简单的操作就可以在固定和流动之间随意切换。</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>例如</h3>
+<pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <h2>流动嵌套</h2>
+  <div class="row">
+    <div class="span6">
+      <p>流动网格嵌套有一点不同：嵌套的列数不需要匹配外层的列，由于每一行都100%的占满了外层的列，所有的列在每一级都会被重置。</p>
+      <div class="row-fluid show-grid">
+        <div class="span12">
+          Fluid 12
+          <div class="row-fluid show-grid">
+            <div class="span6">
+              Fluid 6
+            </div>
+            <div class="span6">
+              Fluid 6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.span -->
+    <div class="span6">
+<pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span12"&gt;
+    Level 1 of column
+    &lt;div class="row-fluid"&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Customizaton
+================================================== -->
+<section id="gridCustomization">
+  <div class="page-header">
+    <h1>定制网格</h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>变量</th>
+        <th>默认值</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>@gridColumns</code></td>
+        <td>12</td>
+        <td>列数</td>
+      </tr>
+      <tr>
+        <td><code>@gridColumnWidth</code></td>
+        <td>60px</td>
+        <td>列宽</td>
+      </tr>
+      <tr>
+        <td><code>@gridGutterWidth</code></td>
+        <td>20px</td>
+        <td>列距</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="span4">
+      <h3>LESS中的变量</h3>
+      <p>创建Bootstrap只用了很少一部分变量，只是用来定制上边提到过的默认940px的网格布局，所有的变量都保存在<strong>variables.less</strong>。</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>如何定制</h3>
+      <p>定制网格意味着你需要改变三个<code>@grid*</code>变量，并且重新编译Bootstrap。改变<strong>variables.less</strong>中的网格变量，可以用<a href="less.html#compiling">四种重新编译的方法</a>之一来实现。如果你想增加更多的列，要确保在<strong>grid.less</strong>中增加相应的CSS文件。</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>保持响应式</h3>
+      <p>只有默认的940px宽的固定网格布局的定制才需要考虑响应式。为了保证Bootstrap响应式的特性，你需要改变<strong>responsive.less</strong>中的布局属性。</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Layouts (Default and fluid)
+================================================== -->
+<section id="layouts">
+  <div class="page-header">
+    <h1>布局设计 <small>用基本的模板创建网页</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h2>固定布局</h2>
+      <p>使用默认的940px宽居中的布局方式，只需要在文件中包含<code>&lt;div class="container"&gt;</code>。</p>
+      <div class="mini-layout">
+        <div class="mini-layout-body"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span6">
+      <h2>流动布局</h2>
+      <p><code>&lt;div class="container-fluid"&gt;</code>提供了更灵活的网页结构、最小最大宽度以及左侧边栏，用来做web应用或文档不错。</p>
+      <div class="mini-layout fluid">
+        <div class="mini-layout-sidebar"></div>
+        <div class="mini-layout-body"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row-fluid"&gt;
+    &lt;div class="span2"&gt;
+      &lt;!--Sidebar content--&gt;
+    &lt;/div&gt;
+    &lt;div class="span10"&gt;
+      &lt;!--Body content--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+
+<!-- Responsive design
+================================================== -->
+<section id="responsive">
+  <div class="page-header">
+    <h1>响应式设计 <small>不同设备和屏幕分辨率的media queries</small></h1>
+  </div>
+  <!-- Supported devices -->
+  <div class="row">
+    <div class="span4">
+      <p><img src="assets/img/responsive-illustrations.png" alt="Responsive devices"></p>
+      <h3>Media queries能做什么</h3>
+      <p>设备类型（Media queries）允许基于比例（ratios）、宽度（widths）和显示类型（display type）等来定制CSS，但是通常集中于<code>min-width</code>和<code>max-width</code>。</p>
+      <ul>
+        <li>修改网格中的列宽</li>
+        <li>必要的地方使用层叠元素（stack elements）代替float元素</li>
+        <li>调整标题和文本的字体大小用以适应更多的设备</li>
+      </ul>
+      <p>使用media queries是可靠的，但是对你的移动用户来说仅能作为一个开始。对于更大的工程，是需要专用的代码而不是只依靠media queries。</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h2>支持的设备</h2>
+      <p>Bootstrap只支持一小部分设备类型来帮助你的项目适应更多的设备和屏幕分辨率：</p>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>类型</th>
+            <th>布局宽度</th>
+            <th>列宽</th>
+            <th>列距</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>智能手机（Smartphones）</td>
+            <td>480px及以下</td>
+            <td class="muted" colspan="2">流动列宽，无固定值</td>
+          </tr>
+          <tr>
+            <td>智能手机到平板（Smartphones to tablets）</td>
+            <td>767px及以下</td>
+            <td class="muted" colspan="2">流动列宽，无固定值</td>
+          </tr>
+          <tr>
+            <td>肖像平板（Portrait tablets）</td>
+            <td>768px及以下</td>
+            <td>42px</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>默认（Default）</td>
+            <td>980px及以上</td>
+            <td>60px</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>大屏幕（Large display）</td>
+            <td>1200px及以上</td>
+            <td>70px</td>
+            <td>30px</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>需要加入meta标签</h3>
+      <p>为了确保设备显示合适的响应式页面文件头中需要包含viewport meta标签。</p>
+      <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <br>
+
+  <!-- Media query code -->
+  <h2>使用media queries</h2>
+  <div class="row">
+    <div class="span4">
+      <p>Bootstrap不会自动的包含media queries，但是理解和加入media queries是很简单的，只需要简单的配置。你可以选择不同的方式使用Bootstrap的响应式（responsive）特性：</p>
+      <ol>
+        <li>使用编译过的版本<strong>bootstrap-responsive.css</strong></li>
+        <li>增加<code>@import "responsive.less"</code>，重新编译Bootstrap</li>
+        <li>作为一个独立的文件改变和重新编译<strong>responsive.less</strong></li>
+      </ol>
+      <p><strong>为什么不是仅仅的包含进去？</strong> 老实说，不是任何地方都需要响应式（responsive）。当然也不鼓励开发者移除这个特性，我们最好的配置方法是：</p>
+    </div><!-- /.span -->
+    <div class="span8">
+<pre class="prettyprint linenums">
+  // Landscape phones and down
+  @media (max-width: 480px) { ... }
+
+  // Landscape phone to portrait tablet
+  @media (max-width: 767px) { ... }
+
+  // Portrait tablet to landscape and desktop
+  @media (min-width: 768px) and (max-width: 979px) { ... }
+
+  // Large desktop
+  @media (min-width: 1200px) { ... }
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+  <br>
+
+  <!-- Responsive utility classes -->
+  <h2>响应式（Responsive）的实用类</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>这又是什么</h3>
+      <p>为了更快的移动友好的开发，使用这些基本的实用工具类由设备自己来显示和隐藏内容。</p>
+      <h3>何时使用</h3>
+      <p>使用有限的基础上，避免在同一网站需要制作完全不同的版本。用它们来配合各个设备的表现形式。</p>
+      <p>比如，你要在手机上是使用<code>&lt;select&gt;</code>元素作为导航布局，而不在平板或者电脑上显示，你可以这么做：</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h3>支持类</h3>
+      <p>这里显示的是Bootstrap支持的类和所给设备类型的对应的效果，可以在<strong>responsive.less</strong>中找到。</p>
+      <table class="table table-bordered table-striped responsive-utilities">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Phones <small>480px and below</small></th>
+            <th>Tablets <small>767px and below</small></th>
+            <th>Desktops <small>768px and above</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><code>.visible-phone</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+          <tr>
+            <th><code>.visible-tablet</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+          <tr>
+            <th><code>.visible-desktop</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-phone</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-tablet</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-desktop</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>测试</h3>
+      <p>调整浏览器的大小或者在不同的设备上测试上边列举的类。</p>
+      <h4>可见...</h4>
+      <p>绿色标签表明在你当前视点类是可见的。</p>
+      <ul class="responsive-utilities-test">
+        <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
+        <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
+        <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
+      </ul>
+      <h4>隐藏...</h4>
+      <p>这里，绿色标签表明在你当前视点类是隐藏的。</p>
+      <ul class="responsive-utilities-test hidden-on">
+        <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
+        <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
+        <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
+      </ul>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+
+  <div class="row">
+    <div class="span4">
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+      
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">回到顶部</a></p>
+        <p>Bootstrap的设计和创建离不开<a href="http://twitter.com/twitter" target="_blank">@twitter</a>的关照，由<a href="http://twitter.com/mdo" target="_blank">@mdo</a>和<a href="http://twitter.com/fat" target="_blank">@fat</a>创建，文档翻译<a href="http://twitter.com/zhangsp" target="_blank">@zhangsp</a></p>
+        <p>代码遵守<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>许可，中英文文档遵守<a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>许可。</p>
+        <p>图标来自于<a href="http://glyphicons.com">Glyphicons Free</a>， 遵守<a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>许可。</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/application.js"></script>
+
+
+  </body>
+</html>

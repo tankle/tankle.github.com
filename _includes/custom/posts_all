@@ -1,0 +1,52 @@
+{% comment %}<!--
+Collate_all helper. Collated posts by year and month.
+Usage:
+  1) assign the 'posts_collate' variable to a valid array of posts.
+  2) include JB/posts_collate
+  example:
+    {% assign posts_all = site.posts %}
+    {% include JB/posts_all %}
+
+  Ordering:
+    Posts are displayed in reverse chronological order.
+    For normal chronological order:
+      1) Change the for loop to this:
+        => 'for post in site.posts reversed'
+      2) Next make sure to change 'post.previous.date' to:
+        => 'post.next.date'
+        
+-->{% endcomment %}
+
+{% if site.JB.posts_all.provider == "custom" %}
+  {% include custom/posts_all %}
+{% else %}
+  {% for post in posts_all limit:count offset:0 %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+  
+    {% if forloop.first %}
+      <dl style="margin-left:20px">
+    {% endif %}
+
+    <dt>
+    <h4 style="margin-top:0px;margin-bottom:4px; color:#333333; font-weight: 250;">{{ post.title }}</h4>
+    <span class="label" style="float:right; margin-left:10px; margin-right:5px; background-color:#5bc0de; font-weight: 180;">{{ post.date | date: "%B %e, %Y" }}</span>
+    <div class="thumbnail" style="background-color: #FFFFFF;">
+    <p style="color:#333333; font-weight: normal;">{{post.description}}</p>
+    <div align="right" style="margin-right:10px; color:#0088CC; font-weight: 200;"><a href="{{ BASE_PATH }}{{ post.url }}">阅读全文 &raquo; </a></div>
+    </div>
+    <hr/ style="margin-top:10px; margin-bottom:4px; style="padding-top:8px; padding-bottom:8px;">
+    </dt>
+  
+    {% if forloop.last %}
+      </dl>
+    {% endif %}
+  {% endfor %}
+  {% if posts_all.size > count %}
+    <hr />
+    <a class="btn btn-primary" href="post_all.html" style="float:right; padding-left:60px; padding-right:60px;">查看更多</a>
+  {% endif %}
+{% endif %}
+{% assign posts_all = nil %}
