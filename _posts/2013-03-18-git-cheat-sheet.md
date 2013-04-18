@@ -170,3 +170,12 @@ $ git push staging master
 		<td><a href="http://www.heroku.com"><img src="/res/images/heroku.png" alt="Heroku" /></a></td>
 	</tr>
 </table>
+
+使用Git过程中的一些错误：
+{% highlight bash %}
+#如果将工程都删弄掉后
+在此执行git push origin master 就会出现一下错误
+fatal: 'origin' does not appear to be a git repository
+#解决办法，在工程下增加origin
+$git remote add origin git@gitserver:iphone_project.git
+{% endhighlight %}
