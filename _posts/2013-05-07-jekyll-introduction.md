@@ -34,9 +34,6 @@ $ [sudo] gem install rdiscount
 
 {% highlight bash %}
 $ sudo gem install rdiscount
-{% endhighlight %}
-
->
    Building native extensions.  This could take a while...
 ERROR:  Error installing rdiscount:
 	ERROR: Failed to build gem native extension.
@@ -44,9 +41,9 @@ ERROR:  Error installing rdiscount:
 /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
 	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
 	from extconf.rb:1:in `<main>' 
->
 Gem files will remain installed in /var/lib/gems/1.9.1/gems/rdiscount-2.0.7.2 for inspection.
 Results logged to /var/lib/gems/1.9.1/gems/rdiscount-2.0.7.2/ext/gem_make.out
+{% endhighlight %}
 
   解决办法：
 
