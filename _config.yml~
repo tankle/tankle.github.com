@@ -4,8 +4,8 @@ permalink: /:year/:month/:day/:title
 
 exclude: [".rbenv-version", "README.md", "Rakefile", "CNAME"]
 auto: true
-markdown: rdiscount
-#markdown: maruku
+#markdown: rdiscount
+markdown: maruku
 pygments: true
 
 # The top bar

@@ -26,33 +26,33 @@ $ easy_install pygments
   8. 安装windows下的Git——[msysGit](http://msysgit.github.com/)
   9. 在Github上创建一个账户。Github会引导你如何进行简单的设置，如果你没用过Git，没关系，只管照做。
   10. 安装Rdiscount
-{% highlight bash %}	
+{% highlight bash%}	
 $ [sudo] gem install rdiscount
 {% endhighlight %}
 在Ubuntu下我遇到过下面这样的错误
-{% highlight bash %}
+{% highlight %}
 $ sudo gem install rdiscount
- Building native extensions.  This could take a while...
- ERROR:  Error installing rdiscount:
+Building native extensions.  This could take a while...
+ERROR:  Error installing rdiscount:
 	ERROR: Failed to build gem native extension.
 
         /usr/bin/ruby1.9.1 extconf.rb
- /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
+/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
 	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
 	from extconf.rb:1:in `<main>'
 
 
- Gem files will remain installed in /var/lib/gems/1.9.1/gems/rdiscount-2.0.7.2 for inspection.
- Results logged to /var/lib/gems/1.9.1/gems/rdiscount-2.0.7.2/ext/gem_make.out
+Gem files will remain installed in /var/lib/gems/1.9.1/gems/rdiscount-2.0.7.2 for inspection.
+Results logged to /var/lib/gems/1.9.1/gems/rdiscount-2.0.7.2/ext/gem_make.out
 {% endhighlight %}
 
- 解决办法：
- 应该是Ruby的版本问题，系统的rubu版本是1.9.1
- 安装最新的版本ruby1.9.3 
-{% highlight bash %}
+解决办法：
+应该是Ruby的版本问题，系统的rubu版本是1.9.1
+安装最新的版本ruby1.9.3
+{% highlight %}
 $ [sudo] apt-get install ruby1.9.3
-{% endhighlight %}
- 在重新安装rdiscont即可
+{% enghigglight %}
+在重新安装rdiscont即可
 
 
 ## 3分钟搭建Jekyll Blog
