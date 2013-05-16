@@ -12,7 +12,7 @@
     <meta property="wb:webmaster" content="45f4c044418008e7" />
     <meta name="chinaz-site-verification" content="1a7852f9-b42f-481f-bd38-1b9e92a55496" />
 	-->
-	{% include JB/analytics %}
+	
 	<meta name="baidu-site-verification" content="12f5c72344eed8ca1e8d05d5e34baf2e"/>
 	
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -78,7 +78,7 @@
       {% endif %}
 	  })
     </script>
-    
+    {% include JB/analytics %}
     <!--{% include mixpanel %}-->
   </body>
 </html>
