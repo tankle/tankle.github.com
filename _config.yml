@@ -84,7 +84,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : weibo
     disqus :
       short_name : tankle120
     livefyre :
@@ -93,6 +93,8 @@ JB :
       account : 123abc
     facebook :
       apikey : 123
+    weibo :
+      weiboname : 桌面小精灵
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -101,7 +103,7 @@ JB :
   analytics :
     provider : google
     google : 
-        tracking_id : 'UA-31075648-1'
+        tracking_id : 'UA-40974691-1'
     getclicky :
       site_id : 
 
