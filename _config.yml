@@ -10,21 +10,12 @@ pygments: true
 
 # The top bar
 topbar:
-  #- 
-  #  url : '/footmark/index.html'
-  #  title : 'Footmark'
   -
     url : '/about/index.html'
     title : '关于我'
   #- 
   #  url : '/develop/index.html'
   #  title : '技术之旅'
-  #-
-  #  url : '/itnews/index.html'
-  #  title : '科技潮流'
-  #-
-  #  url : '/open/index.html'
-  #  title : '开源项目'
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
