@@ -17,7 +17,7 @@ var hours = duration % 24;
 if (hours < 10)hours = "0" + hours;
 duration = parseInt(duration / 24);
 var days = duration;
-var a='<span class="digit">'+days+'</span> days <span class="digit">'+hours+'</span> hours <span class="digit">'+minutes+'</span> minutes <span class="digit">'+duration+"</span> seconds";
+var a='<span class="digit">'+days+'</span> days <span class="digit">'+hours+'</span> hours <span class="digit">'+minutes+'</span> minutes <span class="digit">'+seconds+"</span> seconds";
 $("#elapseClock").html(a)
 
 }
