@@ -13,3 +13,4 @@ title: "关于我"
 
 Email:tankle120@gmail.com
 
+新浪微博:http://weibo.com/tankle?wvr=5&
