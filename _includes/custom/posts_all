@@ -31,7 +31,7 @@ Usage:
     {% endif %}
 
     <dt>
-    <h4 style="margin-top:0px;margin-bottom:4px; color:#333333; font-weight: 250;">{{ <a href="{{ BASE_PATH }}{{ post.url }}"> post.title </a>}}</h4>
+    <h4 style="margin-top:0px;margin-bottom:4px; color:#333333; font-weight: 250;"><a href="{{ BASE_PATH }}{{ post.url }}"> {{post.title  }} </a></h4>
     <span class="label" style="float:right; margin-left:10px; margin-right:5px; background-color:#5bc0de; font-weight: 180;">{{ post.date | date: "%B %e, %Y" }}</span>
     <div class="thumbnail" style="background-color: #FFFFFF;">
     <p style="color:#333333; font-weight: normal;">{{post.description}}</p>
