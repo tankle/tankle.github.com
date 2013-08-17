@@ -10,3 +10,6 @@ title: "关于我"
   {% assign pages_icons = site.tags.about %}
   {% include custom/pages_reversed %}
 </ul>
+
+Email:tankle120@gmail.com
+
