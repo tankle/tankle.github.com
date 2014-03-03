@@ -1,6 +1,7 @@
 <script type="text/javascript">
 (function(){
-var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=http%3A%2F%2Ftankle.github.com%2Fweibo-comments&brandline=y&fontsize=14&ralateuid=1137006882&appkey=212677723&dpc=1";
+var url = "http://widget.weibo.com/distribution/comments.php?width=0&url=auto&brandline=y&appkey=495270272&dpc=1";
+url = url.replace("url=auto", "url=" + encodeURIComponent(document.URL)); 
 document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
 })();
 </script>

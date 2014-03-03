@@ -73,6 +73,10 @@ JB :
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
+  #  根据/_includes/JB/comments-providers/comments 文件里的配置来修改
+  # 对应文件夹的文件内容
+  # _includes/custom/weibo 右边的微博秀
+  # _includes/JB/comments-providers/weibo 微博评论
   #
   comments :
     provider : weibo
@@ -85,7 +89,7 @@ JB :
     facebook :
       apikey : 123
     weibo :
-      weiboname : 桌面小精灵
+      weiboname : 聪Hit
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
