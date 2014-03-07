@@ -16,4 +16,16 @@ description: |
 中文版的有本《Git权威指南》[下载地址](http://www.ppurl.com/2012/11/git%e6%9d%83%e5%a8%81%e6%8c%87%e5%8d%97.html)
 
 
-后续还会更新。。。
+
+##交互式学习Git命令
+Gazler开发了一个交互式的游戏用来学习Github的命令。
+
+这个游戏使用ruby开发的，需要系统安装ruby才能运行。
+
+目前已经又53个levels。这是这个游戏项目的地址，[Githug](https://github.com/Gazler/githug)
+
+有人写了一些攻略，不知道的时候可以参考一下。[攻略](http://fancyoung.com/blog/githug-cheat-sheet/)
+
+
+
+待续。。。
