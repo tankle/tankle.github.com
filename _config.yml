@@ -28,6 +28,12 @@ author :
   twitter : tankle
   feedburner : nil
 
+# 
+# 主题
+# 主要使用的twitter2主题，这个以后可以配置，还不是很熟悉
+# 在_includes\themes\twitter2文件夹下
+
+
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls

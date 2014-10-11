@@ -22,7 +22,7 @@ title: "关于我"
 
 Email:tankle120@gmail.com
 
-新浪微博:(聪HIT)[http://weibo.com/tankle?wvr=5&]
+新浪微博:[聪HIT](http://weibo.com/tankle?wvr=5&)
 
 
 

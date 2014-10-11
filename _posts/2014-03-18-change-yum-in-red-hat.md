@@ -2,7 +2,7 @@
 layout: post
 title: "修改Red Hat自带的yum，使用CentOS版本"
 category: Linux
-tags: [linux] [yum]
+tags: [linux]
 description: |
   由于，Red Hat自带的yum是要收费的，因此我们需要修改Red Hat自带的包管理系统，改成CentOS免费版。
 ---

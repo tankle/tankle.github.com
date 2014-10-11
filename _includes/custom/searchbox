@@ -1,13 +1,13 @@
 <form method="get" action="http://www.google.com/search" target="google_window" style="margin-bottom: 0px;">
 	<div>	
-		<input type="text" value="" name="q" />
+		<input type="text" value="" name="q" height="30px"/>
 		<input type="submit" name=”btnG” id="searchsubmit" value=" 站内搜索 " />
 	</div>
 	<input type="hidden" name="ie" value="UTF-8" />
 	<input type="hidden" name="oe" value="UTF-8" />
 	<input type="hidden" name="hl" value="zh-CN" />
-	<input type="hidden" name="domains" value="http://tankle.github.com" />
-	<input type="hidden" name="sitesearch" value="http://tankle.github.com" />
+	<input type="hidden" name="domains" value="http://tankle.github.io" />
+	<input type="hidden" name="sitesearch" value="http://tankle.github.io" />
 </form>
 
                                 

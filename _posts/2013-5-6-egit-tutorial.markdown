@@ -2,7 +2,7 @@
 layout: post
 title: "eGit安装"
 category: tool
-tags: [git, github, eGit]
+tags: [git]
 description: |
  eGit是一个Eclipse关于git的插件，方便我们管理自己的代码及project的版本
  

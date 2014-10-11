@@ -2,7 +2,7 @@
 layout: post
 title: "在RedHat中安装mysql php apahce phpmyadmin"
 category: linux
-tags: [linux] [RedHat] [mysql] [php] [apache]
+tags: [linux]
 description: |
     在RedHat中安装mysql，php，apache等服务。
 ---
