@@ -27,7 +27,7 @@ description: |
  - Microsoft Fellowship（from 1999）（例如中国的周志华）
 
 #集体合影留念
-![合照](res/images/microsoft.jpg)
+![合照](/res/images/microsoft.jpg)
 
 #微软亚洲研究院的创新项目展示
 这部分主要是介绍一些微软正在研究的一些比较前沿的项目。
