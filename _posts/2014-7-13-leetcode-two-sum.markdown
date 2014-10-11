@@ -9,7 +9,6 @@ description: |
 {% include JB/setup %}
 
 
-leetcode two sum 解题报告
 
 大概将近两年没用c++写过代码了，连基本的写法都忘记了。为了重拾C++基本知识，打算用C++来敲一下leetcode上的题目。没想到碰到第一道题目就想了好久。:-(
 

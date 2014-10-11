@@ -4,6 +4,5 @@
 
 <http://tankle.github.com>
 
- - Twitter: [@sanpingz](http://twitter.com/#!/tankle)
- - Facebook: [mceiba](https://www.facebook.com/#!/tankle)
 
+ - Github：(mceiba)[http://www.mceiba.com/]

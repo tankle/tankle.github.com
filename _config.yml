@@ -79,7 +79,7 @@ JB :
   # _includes/JB/comments-providers/weibo 微博评论
   #
   comments :
-    provider : weibo
+    provider : disqus
     disqus :
       short_name : tankle120
     livefyre :
