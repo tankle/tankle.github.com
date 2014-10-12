@@ -2,7 +2,7 @@
 layout: post
 title: "微软夏令营Day 1"
 category: 旅游
-tags: [微软]
+tags: [微软技术俱乐部]
 description: |
   2014年北京微软夏令营之行
 ---
