@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Markdown语法"
-category: develop
-tags: [jekyll]
+category: Develop
+tags: [jekyll, Markdown 语法]
 description: |
   Markdown的语法非常简单，只相当于HTML标签的一个非常非常小的子集。它的目标是让（在网上）让读文章、写文章、修改文章更容易。Markdown是一种书写格式。
 ---

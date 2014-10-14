@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Git简明手册"
-category: tool
-tags: [git]
+category: Develop
+tags: [git, git 安装]
 description: |
   Git是一个由林纳斯·托瓦兹为了更好地管理linux内核开发而创立的分布式版本控制／软件配置管理软件。如今已经超越CVS、SVN称为主流的版本控制器。许多著名的开源项目都用Git管理。
 ---

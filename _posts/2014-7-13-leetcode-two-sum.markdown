@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "leetcode two sum"
-category: 学习
-tags: [leetcode]
+category: Learning
+tags: [leetcode, 解题报告, two sum]
 description: |
   leetcode two sum 解题报告
 ---

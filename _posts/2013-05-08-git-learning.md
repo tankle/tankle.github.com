@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Git学习资料"
-category: 学习
-tags: [git]
+category: Learning
+tags: [git,git 学习]
 description: |
   分享一些学习Git 的好文章和书籍等。
 ---

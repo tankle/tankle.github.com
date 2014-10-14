@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "利用Jekyll搭建个人博客"
-category: develop
-tags: [jekyll]
+category: Develop
+tags: [jekyll,Jeklly 搭建博客, Markdown, Ruby]
 description: |
   Jekyll是一个静态网站生成器，用ruby编写而成，结合了markdown、Liquid等技术，简化了静态网站的构建过程，配合disqus等技术，可以方便的生成具有简单动态功能的网站。
 ---

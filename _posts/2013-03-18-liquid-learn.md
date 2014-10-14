@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "使用Liquid模板语言"
-category: develop
-tags: [jekyll]
+category: Develop
+tags: [jekyll,Liquid]
 description: |
   Liquid是一模板引擎语言，从电子商务系统Shopify提取而来。Ruby库渲染的安全模板，不影响服务器上的安全性。
 ---

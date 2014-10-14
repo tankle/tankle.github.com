@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "大数据日知录-架构与算法"
-category: 读书
-tags: [big data]
+category: Reading
+tags: [big data,大数据]
 description: |
   《大数据日知录-架构与算法》初步读后感。
 ---
