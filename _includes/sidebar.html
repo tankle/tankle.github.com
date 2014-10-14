@@ -28,6 +28,7 @@
     {% assign pages_list = site.categories.Learning %}
     {% include custom/pages_list_reversed %}
   </ul>
+</div>
 
 {% elsif page.categories contains "Linux" %}
 
@@ -37,6 +38,7 @@
     {% assign pages_list = site.categories.Linux %}
     {% include custom/pages_list_reversed %}
   </ul>
+</div>
 
 {% elsif page.categories contains "Life" %}
 
@@ -45,9 +47,8 @@
   <ul>
     {% assign pages_list = site.categories.Life %}
     {% include custom/pages_list_reversed %}
-  </ul>
-
-   
+  </ul>   
 </div>
+
 
 {% endif %}
