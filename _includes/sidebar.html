@@ -1,51 +1,51 @@
-{% if page.categories contains "Reading" %}
+{% if page.categories contains "reading" %}
 
 <div id="sidebar" class="sidebar">
   <h4>读书</h4>
   <ul>
-    {% assign pages_list = site.categories.Reading %}  
-    {% include JB/pages_list %}
+    {% assign pages_list = site.categories.reading %}  
+    {% include custom/pages_list_reversed %}
   </ul>
   
 </div>
 
-{% elsif page.categories contains "Develop" %}
+{% elsif page.categories contains "develop" %}
 
 <div id="sidebar" class="sidebar">
   <h4>开发技术</h4>
   <ul>
-    {% assign pages_list = site.tags.Develop %}
+    {% assign pages_list = site.tags.develop %}
     {% include custom/pages_list_reversed %}
   </ul>
 
 </div>
 
-{% elsif page.categories contains "Learning" %}
+{% elsif page.categories contains "learning" %}
 
 <div id="sidebar" class="sidebar">
   <h4>学习笔记</h4>
   <ul>
-    {% assign pages_list = site.categories.Learning %}
+    {% assign pages_list = site.categories.learning %}
     {% include custom/pages_list_reversed %}
   </ul>
 </div>
 
-{% elsif page.categories contains "Linux" %}
+{% elsif page.categories contains "linux" %}
 
 <div id="sidebar" class="sidebar">
   <h4>Linux</h4>
   <ul>
-    {% assign pages_list = site.categories.Linux %}
+    {% assign pages_list = site.categories.linux %}
     {% include custom/pages_list_reversed %}
   </ul>
 </div>
 
-{% elsif page.categories contains "Life" %}
+{% elsif page.categories contains "life" %}
 
 <div id="sidebar" class="sidebar">
   <h4>生活</h4>
   <ul>
-    {% assign pages_list = site.categories.Life %}
+    {% assign pages_list = site.categories.life %}
     {% include custom/pages_list_reversed %}
   </ul>   
 </div>
