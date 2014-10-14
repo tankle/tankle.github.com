@@ -2,13 +2,10 @@
 <div>
     <h2>友情链接</h2>
     <ul>
-    <li>
-	<a href="http://www.ruanyifeng.com/">阮一峰</a>
-	<br />
-	<a href="http://guanshan.org/">官山程序员</a>
-	<br />
-	<a href="http://91mingzhi.com">91mingzhi</a>
-    </li>
+		<li><a href="http://www.ruanyifeng.com/">阮一峰</a></li><br />
+		<li><a href="http://guanshan.org/">官山程序员</a> </li> <br /> 
+		<li><a href="http://91mingzhi.com">91mingzhi</a></li> <br />
+		<li><a href="http://aleeee.com/">福乐兄</a></li>
     </ul>
 </div>
 <!-- Friendly Link END -->

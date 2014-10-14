@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="span9" style="width: 85%; margin-left: 90px;">
+  <div class="span9" style="width: 90%; margin-left: px;">
     <div class="content post">
       <h1 class="title">{{ page.title }}</h1>
-      {{ page.description }}
+      <p> {{ page.description }} </p>
       {{ content }}
     {% if page.next and page.categories == page.next.categories %}
       <hr>
