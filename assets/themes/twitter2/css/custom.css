@@ -38,7 +38,7 @@ h3 {margin:0px 0 10px 0}
   margin-left:-10px; 
 }
 
-.content.post , .content.page p{
+.content.post p, .content.page p{
 	font-size:16px;
 	line-height:30px;
 	margin-left:-25px;
