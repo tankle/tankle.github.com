@@ -85,15 +85,17 @@ $sudo ldconfig
 使用mvn 安装jar命令
 {% highlight bash %}
 $mvn install:install-file -Dfile=jar包的位置 -DgroupId=包的groupId -DartifactId=包的artifactId -Dversion=包的version -Dpackaging=jar 
-```
-可以在datumbox-framework目录下pom.xml找到lpsolve包的信息
-{% highlight bash %}
-    <dependency>
-        <groupId>lpsolve</groupId>
-        <artifactId>lpsolve</artifactId>
-        <version>5.5.2.0</version>
-    </dependency>
 {% endhighlight %}
+可以在datumbox-framework目录下pom.xml找到lpsolve包的信息
+<pre><code>
+
+<dependency>
+    <groupId>lpsolve</groupId>
+    <artifactId>lpsolve</artifactId>
+    <version>5.5.2.0</version>
+</dependency>
+
+</code></pre>
 
 下面我们运行下面的命令
 
