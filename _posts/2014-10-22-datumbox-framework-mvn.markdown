@@ -61,8 +61,9 @@ lp_solve_5.5.2.0_dev_ux64.tar.gz
 
 http://lpsolve.sourceforge.net/5.5/Java/README.html
 
-Installation
-1. Copy the lp_solve dynamic libraries from the archives lp_solve_5.5_dev.(zip or tar.gz) and lp_solve_5.5_exe.(zip or tar.gz) to a standard library directory for your target platform. On Windows, a typical place would be \WINDOWS or \WINDOWS\SYSTEM32. On Linux, a typical place would be the directory /usr/local/lib.
+>Installation
+1. Copy the lp_solve dynamic libraries from the archives lp_solve_5.5_dev.(zip or tar.gz) and lp_solve_5.5_exe.(zip or tar.gz) to a standard library directory for your target platform. 
+On Windows, a typical place would be \WINDOWS or \WINDOWS\SYSTEM32. On Linux, a typical place would be the directory /usr/local/lib.
 2. Unzip the Java wrapper distribution file to new directory of your choice.
 On Windows, copy the wrapper stub library lpsolve55j.dll to the directory that already contains lpsolve55.dll.
 3. On Linux, copy the wrapper stub library liblpsolve55j.so to the directory that already contains liblpsolve55.so. Run ldconfig to include the library in the shared libray cache.
@@ -87,15 +88,13 @@ $sudo ldconfig
 $mvn install:install-file -Dfile=jar包的位置 -DgroupId=包的groupId -DartifactId=包的artifactId -Dversion=包的version -Dpackaging=jar 
 {% endhighlight %}
 可以在datumbox-framework目录下pom.xml找到lpsolve包的信息
-<pre><code>
-
+{% highlight bash %}
 <dependency>
     <groupId>lpsolve</groupId>
     <artifactId>lpsolve</artifactId>
     <version>5.5.2.0</version>
 </dependency>
-
-</code></pre>
+{% endhighlight %}
 
 下面我们运行下面的命令
 
