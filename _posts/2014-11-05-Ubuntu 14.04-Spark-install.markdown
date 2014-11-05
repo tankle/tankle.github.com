@@ -16,6 +16,7 @@ Spark 在Ubuntu 14.04 上的安装教程
 ###下载
 下载Spark可以有两种方式
 1. 从官网上[下载](http://spark.apache.org/downloads.html)
+
 2. 从github上下载
 {% highlight bash %}   
 git clone git://github.com/apache/spark.git
@@ -103,4 +104,5 @@ Lines with a: 46, Lines with b: 23
 
 
 [1] Spark 介绍 http://blog.jobbole.com/47791/
+
 [2] Spark 官方教程 http://spark.apache.org/docs/latest/quick-start.html
