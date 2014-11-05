@@ -1,0 +1,106 @@
+---
+layout: post
+title: "Ubuntu 14.04 中Spark 安装"
+category: Linux
+tags: [ubuntu, spark]
+description: |
+  在Ubuntu 14.04 中 安装 Spark
+---
+
+{% include JB/setup %}
+
+##Spark的安装教程
+
+Spark 在Ubuntu 14.04 上的安装教程
+
+###下载
+下载Spark可以有两种方式
+1. 从官网上[下载](http://spark.apache.org/downloads.html)
+2. 从github上下载
+{% highlight bash %}   
+git clone git://github.com/apache/spark.git
+{% endhighlight %}
+
+以上两种方式我都下载的源码，下一步就是编译安装
+
+###编译
+编译需要Scala，如果没有，则需要安装
+{% highlight bash %}   
+sudo apt-get install scala
+{% endhighlight %}
+
+然后进入上一步解压的根目录之行下面一步
+{% highlight bash %}   
+./sbt/sbt assembly
+{% endhighlight %}
+
+这一步需要比较久的时间，需要从网上下载很多的依赖包。
+
+这一步之后Spark的Standalone 模式就已经可以好了
+
+###与Spark交互
+和Spark有两种交互方式
+1. Scala shell 方式
+{% highlight bash %}   
+./bin/spark-shell
+{% endhighlight %}
+
+这样就进入了scala 命令行交互式环境
+
+2. Python shell 方式
+{% highlight bash %}   
+./bin/pyspark
+{% endhighlight %}
+
+
+这样就进入python的交互式环境下
+
+下面是一个交互式例子：
+
+{% highlight bash %}   
+>>> textFile = sc.textFile("README.md") #读取Spark的README文件
+>>> textFile.count() # Number of items in this RDD
+126
+
+>>> textFile.first() # First item in this RDD
+u'# Apache Spark'
+
+>>> linesWithSpark = textFile.filter(lambda line: "Spark" in line)
+
+>>> textFile.filter(lambda line: "Spark" in line).count() # How many lines contain "Spark"?
+15
+>>> textFile.map(lambda line: len(line.split())).reduce(lambda a, b: a if (a > b) else b)
+15
+{% endhighlight %}
+
+还可以使用编写python文件，来执行Spark任务
+
+例如sample.py
+{% highlight python %}   
+"""sample.py"""
+from pyspark import SparkContext
+
+logFile = "YOUR_SPARK_HOME/README.md"  # Should be some file on your system
+sc = SparkContext("local", "Simple App")
+logData = sc.textFile(logFile).cache()
+
+numAs = logData.filter(lambda s: 'a' in s).count()
+numBs = logData.filter(lambda s: 'b' in s).count()
+
+print "Lines with a: %i, lines with b: %i" % (numAs, numBs)
+{% endhighlight %}
+
+然后在命令行下执行
+{% highlight bash %}   
+$ YOUR_SPARK_HOME/bin/spark-submit --master local[4] sample.py
+{% endhighlight %}
+
+就会看到如下结果
+{% highlight bash %}   
+Lines with a: 46, Lines with b: 23
+{% endhighlight %}
+
+
+
+[1] Spark 介绍 http://blog.jobbole.com/47791/
+[2] Spark 官方教程 http://spark.apache.org/docs/latest/quick-start.html
