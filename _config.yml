@@ -96,6 +96,8 @@ JB :
       apikey : 123
     weibo :
       weiboname : 聪Hit
+    duoshuo :
+      short_name : tankle
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
