@@ -38,10 +38,12 @@ h3 {margin:0px 0 10px 0}
   margin-left:-10px; 
 }
 
-.content.post p, .content.page p{
-	font-size:16px;
-	line-height:30px;
+.content.post p{
+  font-size:16px;
+  line-height:30px;
 }
+
+
 
 
 /* SIDEBAR ======================================================== */ 
@@ -194,3 +196,4 @@ h3 {margin:0px 0 10px 0}
   font-size: 13px;
   line-height: 22px;
 }
+

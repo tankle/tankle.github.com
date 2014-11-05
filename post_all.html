@@ -20,9 +20,9 @@ group: example-page
     {% endif %}
 
     <dt>
-    <h4 style="margin-top:0px;margin-bottom:4px">{{ post.title }}</h4><span class="label" style="float:right; margin-left:10px; margin-right:5px;">{{ post.date | date: "%B %e, %Y" }}</span>
-    <div class="thumbnail">
-    <p>{{post.description}}</p>
+    <h4 style="margin-top:0px;margin-bottom:4px"><a href="{{ BASE_PATH }}{{ post.url }}"> {{ post.title }} </a></h4><span class="label" style="float:right; margin-left:10px; margin-right:5px;">{{ post.date | date: "%B %e, %Y" }}</span>
+    <div class="thumbnail" style="background-color: #FFFFFF;">
+    <p style="color:#333333; font-weight: normal;">{{post.description}}</p>
     <span style="float:right; margin-right:10px; color:#0B77B8"><a href="{{ BASE_PATH }}{{ post.url }}">阅读全文 &raquo; </a></span>
     </div>
     <hr/ style="margin-top:10px; margin-bottom:5px; style="padding-top:8px; padding-bottom:8px;">
