@@ -20,7 +20,7 @@ description: |
 
 |方法|数学描述|
 | -- | ------ |
-|1. 选择。选择最值得可信的$g_t$来当做最终的模型，而这个$g_t$可以使用validation set 来进行选择 | $G(x)=argmin_{t\in\{1,2...T\}}E_{val} (g_t)$ |
+|1. 选择。选择最值得可信的$g_t$来当做最终的模型，而这个$g_t$可以使用validation set 来进行选择 | $$G(x)=argmin_{ t \in \{1,2...T\} }E_{val} (g_t)$$ |
 |2. 均一式(uniform)混合(blending)。使用每个$g_t$一票的方式来决定最终的$G_t$ | $G(x)=sign(\sum_{t=1}^T 1\cdot g_t(x))$ |
 |3. 非均一式(non-uniform)混合。对于不同的$g_t$给予不同的权重。该方法包含了上述两种方法，a. 当$\alpha_t=1$时，是uniform混合，b. $E_{val}(g(t))$最小的$g_t$的$\alpha_t$为1，其他都是0，这就是选择方法 | $G(x)=sign(\sum_{t=1}^T \alpha_t g_t(x)),\alpha_t \ge 0$ |
 |4. 条件是混合。在不同的条件下选择不同的$g_t$,该方法包含了non-uniform方法，当$q_t(x)=\alpha_t$时 | $G(x)=sign(\sum_{t=1}^T q_t(x)\cdot g_t(x)),q_t(x) \ge 0$ |
@@ -33,7 +33,8 @@ description: |
 
 缺点：依赖一个很强的假设
 
-
+在该方法中，$g_t$是使用validation set来进行选择的，选择的标准是$g_t$在验证集上的错误率 $E_{val}(g_t)$ 最低，
+但如果使用 $E_{in}(g_t)$ 来代替 $E_{val}(g_t)$ ，则需要一个很强的假设来保证会有一个很小的 $E_{val}(g_t)$ 以及 $E_{out}(g_t)$.
 
 ###均一式混合(uniform blending)
 此方法最好是能够有不同的$g_t$,这样能从多方面的刻画数据，使得结果更加符合明主的方式，让小数服从多数。
@@ -117,7 +118,6 @@ AdaBoost的基本思想是对每个样本赋予不同的权重，来产生一个
 ![CART](/res/images/decisiontree-03.png)
 
 3. 算法的终止条件是：
-
 - 所有 $y_n$是一样的: $ impurity = 0 \Rightarrow   g_t(x) = y_n$
 
 - 所有的 $x_n$ 是一样的: 没有决策桩，既无法产生决策点
