@@ -30,7 +30,8 @@ description: |
 优点：简单，流行
 缺点：依赖一个很强的假设
 
-在该方法中，$g_t$是使用validation set来进行选择的，选择的标准是$g_t$在验证集上的错误率$E_{val}(g_t)$最低，但如果使用$E_{in}(g_t)$来代替$E_{val}(g_t)$，则需要一个很强的假设来保证会有一个很小的$E_{val}(g_t)$以及$E_{out}(g_t)$
+在该方法中，$g_t$是使用validation set来进行选择的，选择的标准是$g_t$在验证集上的错误率$E_{val}(g_t)$最低，
+但如果使用$E_{in}(g_t)$来代替$E_{val}(g_t)$，则需要一个很强的假设来保证会有一个很小的$E_{val}(g_t)$以及$E_{out}(g_t)$
 
 ###均一式混合(uniform blending)
 此方法最好是能够有不同的$g_t$,这样能从多方面的刻画数据，使得结果更加符合明主的方式，让小数服从多数。
@@ -60,33 +61,20 @@ uniform blending还有一个优点是，使用blending的方式产生的结果�
 在learning的模型中，最关键也在$g_t$的多样性，多样性可以从以下几个方面来获得：
 
 1. 使用不同的模型来产生$g_t$，比如SVM，NB等
+
 2. 同一个模型，使用不同的参数
+
 3. 有些算法本身就具有随机性，比如PLA使用不同的随机种子
+
 4. 使用不同的训练数据来获得模型，可以对数据进行采样获得多份不同的数据
 
 混合和学习三种不同集成方式下的对照表
-<table>
-    <tr>
-        <td>集成方式</td>
-        <td>blending（混合）</td>
-        <td>learning（学习）</td>
-    </tr>
-    <tr>
-        <td>均一方式（uniform）</td>
-        <td>voting（投票）/averaging</td>
-        <td>Bagging</td>
-    </tr>
-        <tr>
-        <td>非均一方式（non-uniform）</td>
-        <td>linear blending</td>
-        <td>AdaBoost</td>
-    </tr>
-        <tr>
-        <td>条件式(conditional)</td>
-        <td>Stacking(Any blending)</td>
-        <td>Decision Tree</td>
-    </tr>
-</table>
+
+|集成方式|blending（混合|learning（学习）|
+| ------ | ------------ | -------------- |
+|均一方式（uniform）| voting（投票）/averaging|Bagging|
+|非均一方式（non-uniform）|linear blending|AdaBoost|
+|条件式(conditional)|Stacking(Any blending)|Decision Tree|
 
 
 ###Bagging
@@ -111,20 +99,33 @@ AdaBoost的基本思想是对每个样本赋予不同的权重，来产生一个
 
 其中有四个关键点。
 1. 分支的个数（C）
+
 2. 产生分支的条件
+
 3. 算法终止条件
+
 4. 基本假设
 
 对于上述4个关键点，CART（Classification and Regression Tree）使用了独特参数。
+
 1. C = 2， 产生的树是一个二叉树
+
 2. 对于产生分支的条件，使用了数据的纯洁度来进行度量
+
 ![CART](/res/images/decisiontree-03.png)
+
 3. 算法的终止条件是：
+
     a. 所有 $y_n$是一样的: $ impurity = 0 \Rightarrow   g_t(x) = y_n$
+
     b. 所有的 $x_n$ 是一样的: 没有决策桩，既无法产生决策点
+
 4. 基本假设是：
+
 $g_t (x) = E_{in} - optimal constant$
+
     a. binary/multiclass classification (0/1 error): majority of {$y_n$}
+
     b. regression (squared error): average of {$y_n$}
 
 算法基本流程：
@@ -134,10 +135,15 @@ $g_t (x) = E_{in} - optimal constant$
 
 
 CART的优点是：
+
 1. 适用于类别标签数据
+
 2. 对一些有缺失的数据也能够起作用
+
 3. 是具有可解释性的
+
 4. 支持多标签数据
+
 5. 分类的过程非常高效
 
 上面这些优点也是其他算法很难同时具备的，除了其他的一些决策树算法。
@@ -153,7 +159,9 @@ CART的优点是：
 ![randomforest](/res/images/randomforest.png)
 
 在这讲中还讲到了几个概念：
+
 1. OOB，就是在boost的过程中，需要对数据进行采样，这样就会造成有些数据一直没有被采样过。
+
 2. Feature Selection（特征选择），在RF中，使用的是一种叫排列测试来进行特征选择
 
 上述两点都是RF的优点，在训练过程中不需要额外的validation set，使用OOB既可以进行自我检验；在训练过程中还可以进行特征选择，能选出那些重要的特征。
