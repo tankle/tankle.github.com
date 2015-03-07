@@ -15,13 +15,15 @@ description: |
 本笔记是Course上台湾大学林轩田老师的《机器学习技法课》的学习笔记，用于学习之后的一些总结。
 
 首先，对于Aggregation模型，其基本思想就是使用不同的$g_t$来合成最后的预测模型$G_t$。
+
 对于合成的方式主要有四种：
+
 |方法|数学描述|
-|----|--------|
+| -- | ------ |
 |1. 选择。选择最值得可信的$g_t$来当做最终的模型，而这个$g_t$可以使用validation set 来进行选择 | $G(x)=argmin_{t\in\{1,2...T\}}E_{val} (g_t)$|
-|2. 均一式(uniform)混合(blending)。使用每个$g_t$一票的方式来决定最终的$G_t$ | $G(x)=sign(\sum_{t=1}^T 1\cdot g_t(x))$|
-|3. 非均一式(non-uniform)混合。对于不同的$g_t$给予不同的权重。该方法包含了上述两种方法，a. 当$\alpha_t=1$时，是uniform混合，b. $E_{val}(g(t))$最小的$g_t$的$\alpha_t$为1，其他都是0，这就是选择方法 | $G(x)=sign(\sum_{t=1}^T \alpha_t g_t(x)),\alpha_t \ge 0$|
-|4. 条件是混合。在不同的条件下选择不同的$g_t$,该方法包含了non-uniform方法，当$q_t(x)=\alpha_t$时|$G(x)=sign(\sum_{t=1}^T q_t(x)\cdot g_t(x)),q_t(x) \ge 0$|
+|2. 均一式(uniform)混合(blending)。使用每个$g_t$一票的方式来决定最终的$G_t$ | $G(x)=sign(\sum_{t=1}^T 1\cdot g_t(x))$ |
+|3. 非均一式(non-uniform)混合。对于不同的$g_t$给予不同的权重。该方法包含了上述两种方法，a. 当$\alpha_t=1$时，是uniform混合，b. $E_{val}(g(t))$最小的$g_t$的$\alpha_t$为1，其他都是0，这就是选择方法 | $G(x)=sign(\sum_{t=1}^T \alpha_t g_t(x)),\alpha_t \ge 0$ |
+|4. 条件是混合。在不同的条件下选择不同的$g_t$,该方法包含了non-uniform方法，当$q_t(x)=\alpha_t$时 | $G(x)=sign(\sum_{t=1}^T q_t(x)\cdot g_t(x)),q_t(x) \ge 0$ |
 
 
 ###选择
@@ -99,6 +101,7 @@ AdaBoost的基本思想是对每个样本赋予不同的权重，来产生一个
 ![DecisionTreeAlgorithm](/res/images/decisiontree-02.png)
 
 其中有四个关键点。
+
 1. 分支的个数（C）
 
 2. 产生分支的条件
@@ -112,22 +115,21 @@ AdaBoost的基本思想是对每个样本赋予不同的权重，来产生一个
 1. C = 2， 产生的树是一个二叉树
 
 2. 对于产生分支的条件，使用了数据的纯洁度来进行度量
-
 ![CART](/res/images/decisiontree-03.png)
 
 3. 算法的终止条件是：
 
-a. 所有 $y_n$是一样的: $ impurity = 0 \Rightarrow   g_t(x) = y_n$
+- 所有 $y_n$是一样的: $ impurity = 0 \Rightarrow   g_t(x) = y_n$
 
-b. 所有的 $x_n$ 是一样的: 没有决策桩，既无法产生决策点
+- 所有的 $x_n$ 是一样的: 没有决策桩，既无法产生决策点
 
 4. 基本假设是：
 
 $g_t (x) = E_{in} - optimal constant$
 
-a. binary/multiclass classification (0/1 error): majority of {$y_n$}
+- binary/multiclass classification (0/1 error): majority of {$y_n$}
 
-b. regression (squared error): average of {$y_n$}
+- regression (squared error): average of {$y_n$}
 
 算法基本流程：
 ![CARTAlgorithm](/res/images/cart-01.png)
