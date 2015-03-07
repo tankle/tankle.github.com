@@ -24,4 +24,14 @@
 <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&uid=1611741"></script>
 <!-- UJian Button END -->
 
+<!-- Support Latex -->
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({ 
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+}); 
+</script>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
+<!-- Support Latex End-->
