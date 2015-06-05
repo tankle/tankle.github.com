@@ -1,5 +1,6 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import sys
+import codecs
 
 head = '''---
 layout: post
@@ -14,7 +15,7 @@ description: |
 
 inname = sys.argv[1]
 print("Reading..."+inname)
-f = open(inname, "r")
+f = codecs.open(inname, "r","utf-8")
 lines = f.readlines()
 f.close()
 
@@ -48,7 +49,7 @@ else:    ## Show an error ##
 		
 		
 print("writing...")
-outf = open("../_posts/"+inname, "w")
+outf = codecs.open("../_posts/"+inname, "w","utf-8")
 outf.write(content)
 outf.close()
 		
