@@ -13,11 +13,14 @@ description: |
 Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set.
 
 get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+
 set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
 
 ##解题方法
 首先构建一个cache的数据结构
+
 对于所有的cacheNodes使用一个双向链表来链接，以便删除和插入
+
 再构建一个hash表，key为cache的key，value为cacheNode保存的地址，快速定位cacheNode所在位置
 
 {% highlight cpp %}
