@@ -12,13 +12,13 @@ description: |
 {% include JB/setup %}
 
 
-##7大排序算法比较
 
 插入排序，希尔排序，选择排序，归并排序，冒泡排序，快速排序，堆排序[^1][^2]
 
-###插入排序
-```C++
- /**
+##插入排序
+
+{% highlight cpp %}
+    /**
      * 插入排序
      * 基本思想：寻找到可以插入的位置
      */
@@ -35,9 +35,13 @@ description: |
         }
         return result;
     }
+{% endhighlight %}    
+
+
+
+##希尔排序
+
 {% highlight cpp %}
-###希尔排序
-```C++
     /**
      * 希尔排序
      * 基本思想：
@@ -72,8 +76,10 @@ description: |
         return result;
     }
 {% endhighlight %}
-###选择排序
-```C++
+
+
+##选择排序
+{% highlight cpp %}
     /**
      * 选择排序：
      * 基本思想：
@@ -95,9 +101,12 @@ description: |
         }
         return result;
     }
+{% endhighlight %}
+
+
+##堆排序
+
 {% highlight cpp %}
-###堆排序
-```C++
     //*************************************************
     //堆排序
     /**
@@ -143,8 +152,9 @@ description: |
         return arr;
     }
 {% endhighlight %}
-###冒泡排序
-```C++
+
+##冒泡排序
+{% highlight cpp %}
     /**
      *  冒泡排序
      *  相邻比较
@@ -161,9 +171,11 @@ description: |
         }
         return arr;
     }
+{% endhighlight %}
+
+
+##冒泡排序优化
 {% highlight cpp %}
-###冒泡排序优化
-```C++
     /**
      * 冒泡排序算法的优化1
      *
@@ -186,8 +198,10 @@ description: |
     }
 
 {% endhighlight %}
-###快速排序
-```C++
+
+
+##快速排序
+{% highlight cpp %}
     /**
      * 快速排序
      */
@@ -225,9 +239,10 @@ description: |
         __quickSort(arr,0, arr.size()-1);
         return arr;
     }
+{% endhighlight %}
+
+##归并排序
 {% highlight cpp %}
-###归并排序
-```C++
 /////////////////////////////////////////////////////////////////////
     /**
      * 归并排序
@@ -268,6 +283,7 @@ description: |
 
 
 {% endhighlight %}
+
 程序中有些地方写了this，是因为原始代码是写在一个类中，具体可以查看我的Github参考[代码实现](https://github.com/tankle/offer/tree/master/DataStructure/sort)，其中还有效率比较代码。
 
 ###效率比较
@@ -287,10 +303,10 @@ description: |
 
 可以看到随着待排序数组的增大，快速排序等算法的优势就越明显。
 
-###参考博客：
-[^1]: http://blog.csdn.net/morewindows/article/details/7961256
+##参考博客：
+[1]: http://blog.csdn.net/morewindows/article/details/7961256
 
-[^2]: http://blog.csdn.net/qy1387/article/details/7752973
+[2]: http://blog.csdn.net/qy1387/article/details/7752973
 
 
 
