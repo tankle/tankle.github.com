@@ -21,6 +21,8 @@ title: "关于我"
 
 [个人简历](/resume.html)
 
+[pdf](/about/tancong_resume_cn.pdf)
+
 Email:tankle120#gmail.com
 
 新浪微博:[聪HIT](http://weibo.com/tankle?wvr=5&)
