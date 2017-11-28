@@ -78,5 +78,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/tankle/tankle.github.com.git
-  branch: hexo
+  repo: git@github.com:tankle/tankle.github.com.git
+  branch: master
+  message: "update message"
