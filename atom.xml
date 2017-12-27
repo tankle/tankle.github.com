@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>逗豆蓝</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tankle.github.com/"/>
+  <updated>2017-12-20T11:48:32.038Z</updated>
+  <id>http://tankle.github.com/</id>
+  
+  <author>
+    <name>tankle</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-summary</title>
+    <link href="http://tankle.github.com/2017/12/20/2017-summary/"/>
+    <id>http://tankle.github.com/2017/12/20/2017-summary/</id>
+    <published>2017-12-20T10:30:33.000Z</published>
+    <updated>2017-12-20T11:48:32.038Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2017年回顾"><a href="#2017年回顾" class="headerlink" title="2017年回顾"></a>2017年回顾</h1><p>今天是我的阳历生日，每到了这个时候，一年也基本快要过去了。</p><p>大家也开始忙着写自己的总结报告，各种复盘。那我也简单总结下这一年吧。</p><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><p>2017年完成了几件非常大的事情：</p><ul><li>买了人生的第一套房子，从此走上了房奴这条不归路<code>~~~~(&gt;_&lt;)~~~~</code></li><li>把女朋友变成了老婆（最开心的一件事了）</li></ul><h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><ul><li>5月份，跟着朋友自驾游去了舟山，吃了特别棒的舟山海鲜，如果有空，准备每年都去吃一次</li><li><p>去了一趟西班牙，人生第一次出国旅游，在大学时期就办好了签证上面盖了第一个章；</p><p>  印象最深刻的就是地中海了，海水是那么的蓝。在紧凑的行程中，去了两次巴塞罗那的海滩，躺着细腻的沙滩上，吹着海风，在惬意不过了~</p></li><li><p>爬了徽杭古道，从开始爬到下山，总共花了将近6个小时，还是非常累的；</p></li></ul><h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>再过一个月，也算是工作两年的人了，时间过得真快。<br>还记得两年前刚才学校毕业，也差不多这个时候，这么冷，来到了杭州。</p><ul><li>刚过完年，小组老大就辞职了。还是非常感激他的，虽然只有跟了他一年，但也从他身上学到一些东西，比如：如何处理问题、思维方式的转变；</li><li>工作能力的提升：<ol><li>实现了一个基于HMM模型的拼音转汉字的模块</li><li>在Suggest模块中实现了<a href="http://igoro.com/archive/efficient-auto-complete-with-a-ternary-search-tree/" target="_blank" rel="noopener">三元搜索树</a>（ternary search tree）， 能够快速的找到前缀词的候选词列表。其相比于普通的Trie树，能够节省大量的空间，因为Trie需要保存大量的空指针节点；</li><li>下半年将Ranlib的相关算法引入了搜索排序中</li><li>学会了Spark的使用，顺便还学习了Scala语言</li><li>对深度学习有了进一步的了解，</li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2017年回顾&quot;&gt;&lt;a href=&quot;#2017年回顾&quot; class=&quot;headerlink&quot; title=&quot;2017年回顾&quot;&gt;&lt;/a&gt;2017年回顾&lt;/h1&gt;&lt;p&gt;今天是我的阳历生日，每到了这个时候，一年也基本快要过去了。&lt;/p&gt;
+&lt;p&gt;大家也开始忙着写自己的总结
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://tankle.github.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="生活" scheme="http://tankle.github.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="总结" scheme="http://tankle.github.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://tankle.github.com/2017/11/29/hello-world/"/>
+    <id>http://tankle.github.com/2017/11/29/hello-world/</id>
+    <published>2017-11-29T02:46:54.516Z</published>
+    <updated>2017-12-27T13:10:20.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><h3 id="具体安装过程"><a href="#具体安装过程" class="headerlink" title="具体安装过程"></a>具体安装过程</h3><h4 id="初始化以及生成网站"><a href="#初始化以及生成网站" class="headerlink" title="初始化以及生成网站"></a>初始化以及生成网站</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g # 这步是安装hexo的命令行</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo g # 或者hexo generate</span><br><span class="line">$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看</span><br></pre></td></tr></table></figure><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>repo 是Github的项目的链接地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxx.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p><h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save # 需要安装这个插件</span><br><span class="line">$ hexo d # 即可</span><br></pre></td></tr></table></figure><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>在_config.yml配置文件中添加插件信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">  hexo-generator-feed #RSS订阅插件</span><br><span class="line">  hexo-generator-sitemap  #sitemap插件</span><br><span class="line">然后，安装插件，后面要加上--save，表示依赖项。</span><br><span class="line"></span><br><span class="line">RSS订阅插件</span><br><span class="line">hexo-generator-feed：生成rss订阅文件</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">添加配置信息</span><br><span class="line"></span><br><span class="line"># sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">SiteMap插件</span><br><span class="line">hexo-generator-sitemap：生成易于搜索引擎搜素的网站地图</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">添加配置信息：</span><br><span class="line"></span><br><span class="line"># feed</span><br><span class="line">atom:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">可以在主题配置文件中添加相关配置，可以在页面上显示。</span><br><span class="line">比如，添加链接信息</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">links:</span><br><span class="line">  Feed: /atom.xml</span><br><span class="line">  SiteMap: /sitemap.xml</span><br></pre></td></tr></table></figure><h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><p><a href="https://www.jianshu.com/p/5973c05d7100" target="_blank" rel="noopener">https://www.jianshu.com/p/5973c05d7100</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
