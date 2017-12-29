@@ -4,10 +4,10 @@
 
 # Site
 title: 逗豆蓝
-subtitle: 
+subtitle:
 description:
 author: tankle
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -42,7 +42,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -51,7 +51,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -72,12 +72,31 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+#theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# git@github.com:tankle/tankle.github.com.git
 deploy:
   type: git
-  repo: git@github.com:tankle/tankle.github.com.git
+  repo: https://github.com/tankle/tankle.github.com.git
   branch: master
   message: "update blog"
+
+# Extensions
+plugins:
+ hexo-generator-feed
+ hexo-generator-sitemap
+# Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+# sitemap
+sitemap:
+  path: sitemap.xml
+
+links:
+  Feed: /atom.xml
+  SiteMap: /sitemap.xml  
