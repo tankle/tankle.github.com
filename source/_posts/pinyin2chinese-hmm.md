@@ -58,6 +58,143 @@ $π=（π_i)_N×1  $
 已知模型  $λ=(A,B,π)$, 和观测序列  $O={o_1,o_2,⋯,o_T}$
 求给定观测序列条件概率  $P(I∣O,λ)$  最大的状态序列  $I={i)1,i_2,⋯,i_T}$
 
+```python
+# -*- coding: utf-8 -*-
+#
+# @author hztancong
+#
+
+import numpy as np
+
+# 隐藏状态转移矩阵
+trans_prob = {"周杰":0.9,
+              "周姐":0.1,
+              "周洁":0.3,
+              "杰伦":0.8,
+              "结论":0.7
+              }
+
+# 隐藏状态初始状态
+pi = {
+    "周":0.5,
+    "粥":0.3,
+    "杰":0.5,
+    "姐":0.4,
+    "节":0.2,
+    "结":0.3,
+    "轮":0.1,
+    "伦":0.5,
+    "论":0.5,
+}
+
+# 观察状态到隐藏状态的转移矩阵
+emit_probs = {
+    "zhou周":0.5,
+    "zhou粥":0.1,
+    "jie姐":0.1,
+    "jie节":0.1,
+    "jie结":0.2,
+    "jie杰":0.2,
+    "lun轮":0.1,
+    "lun伦":0.3,
+    "lun论":0.1,
+}
+
+def viterbi(word_list, pinyin_list, n, id2word):
+    """
+    维特比算法求解最大路径问题
+    :param word_list:   每个拼音对应的隐藏状态矩阵
+    :param n:   可能观察到的状态数， 对应为汉字数量
+    :param id2word:    id到汉字的映射
+    :return:
+    """
+    T = len(word_list)  # 观察状态的长度
+
+    delta = np.zeros((T, n))
+    # 保存转移下标值
+    psi = np.zeros((T, n), dtype=int)
+
+    # 初始化第一个字符的转移概率， 设置为每个词在词典中的单独出现的概率
+    words = word_list[0]
+    for w in words:
+        delta[0][w] = pi[id2word[w]]
+
+    # 动态规划计算
+    for idx in range(1, T):
+        words = word_list[idx]
+        for i in range(len(words)):
+            max_value = 0
+            pre_words = word_list[idx-1]
+            index = 1
+            for j in range(len(pre_words)):
+                tmp_key = id2word[pre_words[j]] + id2word[words[i]]
+                # 获得转移概率，如果不存在，转移概率则为0
+                if tmp_key in trans_prob:
+                    prob = trans_prob[tmp_key]
+                else:
+                    prob = 0
+                tmp_value = delta[idx-1][pre_words[j]] * prob
+                if max_value < tmp_value:
+                    max_value = tmp_value
+                    index = j
+
+            # 计算观察状态到隐藏状态的概率
+            tmp_key = pinyin_list[idx] + id2word[words[i]]
+            emit_prob = emit_probs[tmp_key] * max_value
+
+            delta[idx][words[i]] = emit_prob
+            psi[idx][words[i]] = pre_words[index]
+
+    # print delta
+    # 终止
+
+    prob = 0
+    path = np.zeros(T, dtype=int)
+    path[T - 1] = 1
+    # 获取最大的转移值
+    for i in range(n):
+        if prob < delta[T - 1][i]:
+            prob = delta[T - 1][i]
+            path[T - 1] = i
+
+
+    # 最优路径回溯
+    for t in range(T - 2, -1, -1):
+        path[t] = psi[t+1][path[t+1]]
+
+    # 生成解析结果
+    final_word = ""
+    for i in range(T):
+        final_word += id2word[path[i]]
+
+    print final_word
+
+if __name__ == "__main__":
+    pinyin_list = ["zhou", "jie", "lun"]
+    word_list = [["周", "粥"], ["杰", "姐", "节", "结"], ["轮", "伦", "论"]]
+    words = set()
+    for wl in word_list:
+        for w in wl:
+            words.add(w)
+
+    word2idx = dict()
+    id2word = dict()
+    idx = 0
+    for w in words:
+        word2idx[w] = idx
+        id2word[idx] = w
+        idx += 1
+
+    # 将各个汉字转换为id表示
+    word_id_list = [None] * len(word_list)
+    for i, wl in enumerate(word_list):
+        word_id_list[i] = [None] * len(wl)
+        for j, w in enumerate(wl):
+            word_id_list[i][j] = (word2idx[w])
+
+    viterbi(word_id_list, pinyin_list, len(words), id2word, )
+
+```
 
 ## 参考
 * [Github 代码](https://github.com/tankle/NLPAlgorithm/blob/master/SpellCorrect/src/main/io/github/tankle/algorithm/DTSpellCorrectFactory.java)
