@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="逗豆蓝">
 <meta property="og:description" content="背景中文输入法有许多不同种的方法，主要有三大类：拼音输入法、形码输入法(如：五笔)和音型码输入法(如：二笔)，而当今最流行的输入法非拼音输入法莫属了。在拼音输入法中，用户首先将中文转换为拼音，然后输入法根据输入的拼音序列转换为对应的汉字，已完成中文的输入。 在云音乐搜索中，由于用户每输入一个字符就会触发一次搜索，因此在搜索日志当中能收到大量的拼音序列搜索词。比如：zhou jie lun（周杰伦）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-12T10:41:00.000Z">
+<meta property="og:updated_time" content="2018-01-12T10:51:03.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隐马尔科夫模型实战之拼音转汉字">
 <meta name="twitter:description" content="背景中文输入法有许多不同种的方法，主要有三大类：拼音输入法、形码输入法(如：五笔)和音型码输入法(如：二笔)，而当今最流行的输入法非拼音输入法莫属了。在拼音输入法中，用户首先将中文转换为拼音，然后输入法根据输入的拼音序列转换为对应的汉字，已完成中文的输入。 在云音乐搜索中，由于用户每输入一个字符就会触发一次搜索，因此在搜索日志当中能收到大量的拼音序列搜索词。比如：zhou jie lun（周杰伦）">
@@ -134,6 +134,25 @@
 
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40974691-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?005bfdec80447c76e9804407c865589d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -193,12 +212,62 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -357,9 +426,9 @@
 <h3 id="隐马尔科夫模型简介"><a href="#隐马尔科夫模型简介" class="headerlink" title="隐马尔科夫模型简介"></a>隐马尔科夫模型简介</h3><p>一些基本符号的说明：</p>
 <ul>
 <li>Q  是所有可能的隐藏状态的集合, 其中  N  是可能的状态数， 对应所有可能的汉字的状态数量；</li>
-<li>V  是所有可能的观测的集合, 其中  M  是可能的观测数，对应所有可能的拼音的状态数量；<br>$$Q={q_1,q_2,…,q_N}, V={v_1,v_2,…,v_M}$$</li>
+<li>V  是所有可能的观测的集合, 其中  M  是可能的观测数，对应所有可能的拼音的状态数量；<br>$$ Q= { q_1, q_2,…,q_N }, V= {v_1,v_2,…,v_M } $$</li>
 <li>I  是长度为  T  的隐藏状态序列， 对应用户输入的拼音序列对应的汉字序列；</li>
-<li>O  是对应的观测序列， 对应用户输入的拼音序列；<br>$$I={i_1,i_2,…,i_T},O={o_1,o_2,…,o_T}$$</li>
+<li>O  是对应的观测序列， 对应用户输入的拼音序列；<br>$$I={i_1,i_2,…,i_T },O={o_1,o_2,…,o_T}$$</li>
 </ul>
 <p>隐马尔科夫模型（HMM，Hidden Markov Models）可以使用一个三元组来刻画$λ=(π,A,B)$:</p>
 <ul>
@@ -368,7 +437,7 @@
 <li>π  是初始状态概率向量:<br>$π=(π_i)_{N×1}  $</li>
 </ul>
 <h3 id="HMM的三个基本问题"><a href="#HMM的三个基本问题" class="headerlink" title="HMM的三个基本问题"></a>HMM的三个基本问题</h3><ul>
-<li><p>概率计算问题: 前向-后向算法——动态规划<br>给定模型$λ=(A,B,π)$和观测序列$O={o_1,o_2,…,o_T}$<br>计算模型 $λ$ 下观测序列 $O$  出现的概率  $P(O∣λ)$</p>
+<li><p>概率计算问题: 前向-后向算法——动态规划<br>给定模型$λ=(A,B,π)$和观测序列$O=\{o_1,o_2,…,o_T\}$<br>计算模型 $λ$ 下观测序列 $O$  出现的概率  $P(O∣λ)$</p>
 </li>
 <li><p>学习问题: Baum-Welch算法(状态未知)——EM<br>已知观测序列 $O={o_1,o_2,…,o_T}$<br>估计模型  $λ=(A,B,π)$的参数,使得在该模型下观测序列 $P(O∣λ)$  最大</p>
 </li>
@@ -393,7 +462,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># @author hztancong</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏状态转移矩阵</span></span><br><span class="line">trans_prob = &#123;<span class="string">"周杰"</span>:<span class="number">0.9</span>,</span><br><span class="line">              <span class="string">"周姐"</span>:<span class="number">0.1</span>,</span><br><span class="line">              <span class="string">"周洁"</span>:<span class="number">0.3</span>,</span><br><span class="line">              <span class="string">"杰伦"</span>:<span class="number">0.8</span>,</span><br><span class="line">              <span class="string">"结论"</span>:<span class="number">0.7</span></span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏状态初始状态</span></span><br><span class="line">pi = &#123;</span><br><span class="line">    <span class="string">"周"</span>:<span class="number">0.5</span>,</span><br><span class="line">    <span class="string">"粥"</span>:<span class="number">0.3</span>,</span><br><span class="line">    <span class="string">"杰"</span>:<span class="number">0.5</span>,</span><br><span class="line">    <span class="string">"姐"</span>:<span class="number">0.4</span>,</span><br><span class="line">    <span class="string">"节"</span>:<span class="number">0.2</span>,</span><br><span class="line">    <span class="string">"结"</span>:<span class="number">0.3</span>,</span><br><span class="line">    <span class="string">"轮"</span>:<span class="number">0.1</span>,</span><br><span class="line">    <span class="string">"伦"</span>:<span class="number">0.5</span>,</span><br><span class="line">    <span class="string">"论"</span>:<span class="number">0.5</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏状态到观察状态的发射矩阵</span></span><br><span class="line">emit_probs = &#123;</span><br><span class="line">    <span class="string">"周zhou"</span>:<span class="number">0.5</span>,</span><br><span class="line">    <span class="string">"粥zhou"</span>:<span class="number">0.1</span>,</span><br><span class="line">    <span class="string">"姐jie"</span>:<span class="number">0.1</span>,</span><br><span class="line">    <span class="string">"节jie"</span>:<span class="number">0.1</span>,</span><br><span class="line">    <span class="string">"结jie"</span>:<span class="number">0.2</span>,</span><br><span class="line">    <span class="string">"杰jie"</span>:<span class="number">0.2</span>,</span><br><span class="line">    <span class="string">"轮lun"</span>:<span class="number">0.1</span>,</span><br><span class="line">    <span class="string">"伦lun"</span>:<span class="number">0.3</span>,</span><br><span class="line">    <span class="string">"论lun"</span>:<span class="number">0.1</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">viterbi</span><span class="params">(word_list, pinyin_list, n, id2word)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    维特比算法求解最大路径问题</span></span><br><span class="line"><span class="string">    :param word_list:   每个拼音对应的隐藏状态矩阵</span></span><br><span class="line"><span class="string">    :param n:   可能观察到的状态数， 对应为汉字数量</span></span><br><span class="line"><span class="string">    :param id2word:    id到汉字的映射</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    T = len(word_list)  <span class="comment"># 观察状态的长度</span></span><br><span class="line"></span><br><span class="line">    delta = np.zeros((T, n))</span><br><span class="line">    <span class="comment"># 保存转移下标值</span></span><br><span class="line">    psi = np.zeros((T, n), dtype=int)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化第一个字符的转移概率， 设置为每个词在词典中的单独出现的概率</span></span><br><span class="line">    words = word_list[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> w <span class="keyword">in</span> words:</span><br><span class="line">        delta[<span class="number">0</span>][w] = pi[id2word[w]]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 动态规划计算</span></span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> range(<span class="number">1</span>, T):</span><br><span class="line">        words = word_list[idx]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(words)):</span><br><span class="line">            max_value = <span class="number">0</span></span><br><span class="line">            pre_words = word_list[idx<span class="number">-1</span>]</span><br><span class="line">            index = <span class="number">1</span></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(len(pre_words)):</span><br><span class="line">                tmp_key = id2word[pre_words[j]] + id2word[words[i]]</span><br><span class="line">                <span class="comment"># 获得转移概率，如果不存在，转移概率则为0</span></span><br><span class="line">                <span class="keyword">if</span> tmp_key <span class="keyword">in</span> trans_prob:</span><br><span class="line">                    prob = trans_prob[tmp_key]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    prob = <span class="number">0</span></span><br><span class="line">                tmp_value = delta[idx<span class="number">-1</span>][pre_words[j]] * prob</span><br><span class="line">                <span class="keyword">if</span> max_value &lt; tmp_value:</span><br><span class="line">                    max_value = tmp_value</span><br><span class="line">                    index = j</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 计算观察状态到隐藏状态的概率</span></span><br><span class="line">            tmp_key = id2word[words[i]] + pinyin_list[idx] </span><br><span class="line">            emit_prob = emit_probs[tmp_key] * max_value</span><br><span class="line"></span><br><span class="line">            delta[idx][words[i]] = emit_prob</span><br><span class="line">            psi[idx][words[i]] = pre_words[index]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># print delta</span></span><br><span class="line">    <span class="comment"># 终止</span></span><br><span class="line"></span><br><span class="line">    prob = <span class="number">0</span></span><br><span class="line">    path = np.zeros(T, dtype=int)</span><br><span class="line">    path[T - <span class="number">1</span>] = <span class="number">1</span></span><br><span class="line">    <span class="comment"># 获取最大的转移值</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        <span class="keyword">if</span> prob &lt; delta[T - <span class="number">1</span>][i]:</span><br><span class="line">            prob = delta[T - <span class="number">1</span>][i]</span><br><span class="line">            path[T - <span class="number">1</span>] = i</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 最优路径回溯</span></span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> range(T - <span class="number">2</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">        path[t] = psi[t+<span class="number">1</span>][path[t+<span class="number">1</span>]]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成解析结果</span></span><br><span class="line">    final_word = <span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(T):</span><br><span class="line">        final_word += id2word[path[i]]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">print</span> final_word</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    pinyin_list = [<span class="string">"zhou"</span>, <span class="string">"jie"</span>, <span class="string">"lun"</span>]</span><br><span class="line">    word_list = [[<span class="string">"周"</span>, <span class="string">"粥"</span>], [<span class="string">"杰"</span>, <span class="string">"姐"</span>, <span class="string">"节"</span>, <span class="string">"结"</span>], [<span class="string">"轮"</span>, <span class="string">"伦"</span>, <span class="string">"论"</span>]]</span><br><span class="line">    words = set()</span><br><span class="line">    <span class="keyword">for</span> wl <span class="keyword">in</span> word_list:</span><br><span class="line">        <span class="keyword">for</span> w <span class="keyword">in</span> wl:</span><br><span class="line">            words.add(w)</span><br><span class="line"></span><br><span class="line">    word2idx = dict()</span><br><span class="line">    id2word = dict()</span><br><span class="line">    idx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> w <span class="keyword">in</span> words:</span><br><span class="line">        word2idx[w] = idx</span><br><span class="line">        id2word[idx] = w</span><br><span class="line">        idx += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将各个汉字转换为id表示</span></span><br><span class="line">    word_id_list = [<span class="keyword">None</span>] * len(word_list)</span><br><span class="line">    <span class="keyword">for</span> i, wl <span class="keyword">in</span> enumerate(word_list):</span><br><span class="line">        word_id_list[i] = [<span class="keyword">None</span>] * len(wl)</span><br><span class="line">        <span class="keyword">for</span> j, w <span class="keyword">in</span> enumerate(wl):</span><br><span class="line">            word_id_list[i][j] = (word2idx[w])</span><br><span class="line"></span><br><span class="line">    viterbi(word_id_list, pinyin_list, len(words), id2word, )</span><br></pre></td></tr></table></figure>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://github.com/tankle/NLPAlgorithm/blob/master/SpellCorrect/src/main/io/github/tankle/algorithm/DTSpellCorrectFactory.java" target="_blank" rel="noopener">Github 代码</a></li>
-<li>[HMM学习最佳范例四：隐马尔科夫模型] (<a href="http://www.52nlp.cn/hmm-learn-best-practices-four-hidden-markov-models" target="_blank" rel="noopener">http://www.52nlp.cn/hmm-learn-best-practices-four-hidden-markov-models</a>)</li>
+<li><a href="http://www.52nlp.cn/hmm-learn-best-practices-four-hidden-markov-models" target="_blank" rel="noopener">HMM学习最佳范例四：隐马尔科夫模型</a></li>
 <li><a href="https://www.zybuluo.com/knight/note/96093" target="_blank" rel="noopener">MathJax 使用手册</a></li>
 </ul>
 

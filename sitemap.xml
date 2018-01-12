@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tankle.github.com//404.html</loc>
+    
+    <lastmod>2018-01-12T12:38:52.460Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tankle.github.com/404/index.html</loc>
+    
+    <lastmod>2018-01-12T11:37:17.812Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tankle.github.com/about/index.html</loc>
+    
+    <lastmod>2018-01-12T11:28:23.130Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tankle.github.com/2018/01/09/pinyin2chinese-hmm/</loc>
     
-    <lastmod>2018-01-12T10:41:00.000Z</lastmod>
+    <lastmod>2018-01-12T10:51:03.574Z</lastmod>
     
   </url>
   
